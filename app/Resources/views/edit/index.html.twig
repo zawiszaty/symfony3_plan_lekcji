@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <table>
+        <tr>
+            <th>poniedzialek</th>
+            <th>sala</th>
+            <th>wtorek</th>
+            <th>sala</th>
+            <th>sroda</th>
+            <th>sala</th>
+            <th>czwartek</th>
+            <th>sala</th>
+            <th>piatek</th>
+            <th>sala</th>
+        </tr>
+        {% for item in classList %}
+            <tr>
+                <td><input type="text" value="{{ item.poniedzialek }}"></td>
+                <td><input type="text" value="{{ item.salap }}"></td>
+                <td><input type="text" value="{{ item.wtorek }}"></td>
+                <td><input type="text" value="{{ item.salaw }}"></td>
+                <td><input type="text" value="{{ item.sroda }}"></td>
+                <td><input type="text" value="{{ item.salas }}"></td>
+                <td><input type="text" value="{{ item.czwartek }}"></td>
+                <td><input type="text" value="{{ item.salac }}"></td>
+                <td><input type="text" value="{{ item.piatek }}"></td>
+                <td><input type="text" value="{{ item.salapi }}"></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ path('panel') }}">Back to panel</a>
+{% endblock %}
+
+
+
