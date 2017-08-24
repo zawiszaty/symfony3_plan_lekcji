@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+   <table>
+       <tr>
+           <th>poniedzialek</th>
+           <th>sala</th>
+           <th>wtorek</th>
+           <th>sala</th>
+           <th>sroda</th>
+           <th>sala</th>
+           <th>czwartek</th>
+           <th>sala</th>
+           <th>piatek</th>
+           <th>sala</th>
+       </tr>
+       {% for item in classList %}
+           <tr>
+               <td>{{ item.poniedzialek }}</td>
+               <td>{{ item.salap }}</td>
+               <td>{{ item.wtorek }}</td>
+               <td>{{ item.salaw }}</td>
+               <td>{{ item.sroda }}</td>
+               <td>{{ item.salas }}</td>
+               <td>{{ item.czwartek }}</td>
+               <td>{{ item.salac }}</td>
+               <td>{{ item.piatek }}</td>
+               <td>{{ item.salapi }}</td>
+           </tr>
+       {% endfor %}
+   </table>
+    <a href="{{ path('homepage') }}">Back to home</a>
+{% endblock %}
+
+
+

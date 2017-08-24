@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="technikum">
+        {% for item in classList %}
+            {% if item.type == 'technikum' %}
+                <a href="{{ path('singleClass',{'className': item.className}) }}">{{ item.className }}</a>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="liceum">
+        {% for item in classList %}
+            {% if item.type == 'liceum' %}
+                <a href="{{ path('singleClass',{'className': item.className}) }}"> {{ item.className }}</a>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="szkola_zawodowa">
+        {% for item in classList %}
+            {% if item.type == 'szkoła zawodowa' %}
+                <a href="{{ path('singleClass',{'className': item.className}) }}"> {{ item.className }}</a>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
